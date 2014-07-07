@@ -1,0 +1,12 @@
+language: c++
+
+compiler:
+  - gcc
+  - clang
+
+script:
+  - cd `mktemp -d`
+  - autoreconf -ivf ${TRAVIS_BUILD_DIR}
+  - ${TRAVIS_BUILD_DIR}/configure --prefix=`mktemp -d`
+  - make
+  - make dist
