@@ -41,7 +41,7 @@ AC_CHECK_FUNCS([floor pow sqrt])
 
 
 # checks for libraries
-BOOST_REQUIRE([1.52.0])
+BOOST_REQUIRE([1.46.0])
 AX_CXX_HAVE_STD
 AX_CXX_HAVE_STL
 
