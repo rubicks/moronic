@@ -5,8 +5,9 @@ compiler:
   - clang
 
 script:
-  - sudo apt-get update && sudo apt-get install boost
-  - cd `mktemp -d`
+  - cd `mktemp -d` && pwd
+  - sudo apt-get update && sudo apt-get install libboost-dev
+  - mkdir -vp ${TRAVIS_BUILD_DIR}/m4
   - autoreconf -ivf ${TRAVIS_BUILD_DIR}
   - ${TRAVIS_BUILD_DIR}/configure --prefix=`mktemp -d`
   - make
