@@ -19,3 +19,18 @@
 *.exe
 *.out
 *.app
+
+# emacs temporary files
+*~
+
+# build directory
+/_build/
+
+# autotools detritus
+*.in
+/INSTALL
+/aclocal.m4
+/autom4te.cache/
+/build-aux/
+/configure
+/m4/
