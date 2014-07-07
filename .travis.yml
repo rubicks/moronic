@@ -5,6 +5,7 @@ compiler:
   - clang
 
 script:
+  - sudo apt-get update && sudo apt-get install boost
   - cd `mktemp -d`
   - autoreconf -ivf ${TRAVIS_BUILD_DIR}
   - ${TRAVIS_BUILD_DIR}/configure --prefix=`mktemp -d`
